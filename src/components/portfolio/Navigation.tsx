@@ -62,12 +62,18 @@ export const Navigation = () => {
                 </button>
               ))}
               <Button
-                variant="default"
+                asChild
+                variant="secondary"
                 size="sm"
-                onClick={() => scrollToSection("#contact")}
-                className="bg-gradient-hero hover:shadow-hover transition-all duration-300"
+                className="bg-white text-primary hover:bg-white/90 font-semibold px-6 py-2"
               >
-                Download CV
+                <a
+                  href="https://drive.google.com/file/d/12welaYARXNlNMZoKCQQGpy9fEki54n9h/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Download CV
+                </a>
               </Button>
             </div>
 
@@ -98,14 +104,17 @@ export const Navigation = () => {
               </button>
             ))}
             <Button
-              variant="default"
-              onClick={() => {
-                scrollToSection("#contact");
-                setIsMobileMenuOpen(false);
-              }}
-              className="bg-gradient-hero hover:shadow-hover transition-all duration-300"
+              asChild
+              variant="secondary"
+              className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-3"
             >
-              Download CV
+              <a
+                href="https://drive.google.com/your-cv-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Download CV
+              </a>
             </Button>
           </div>
         </div>

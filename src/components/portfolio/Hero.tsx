@@ -24,19 +24,20 @@ export const Hero = () => {
           <h1 className="text-5xl md:text-7xl font-space-grotesk font-bold text-white mb-6">
             HARIF YASSINE
           </h1>
-          
+
           <h2 className="text-xl md:text-2xl text-white/90 font-inter font-medium mb-4">
             Specialized Technician in Electromechanics of Automated Systems
           </h2>
-          
+
           <div className="flex items-center justify-center text-white/80 mb-8">
             <MapPin size={20} className="mr-2" />
             <span className="text-lg">Casablanca, Morocco</span>
           </div>
 
           <p className="text-lg md:text-xl text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Passionate electromechanics engineer with expertise in automated systems, 
-            maintenance management, and industrial operations. Driven by innovation and precision.
+            Passionate electromechanics engineer with expertise in automated
+            systems, maintenance management, and industrial operations. Driven
+            by innovation and precision.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
@@ -49,11 +50,18 @@ export const Hero = () => {
               Explore My Work
             </Button>
             <Button
-              variant="outline"
+              asChild
+              variant="secondary"
               size="lg"
-              className="border-white text-white hover:bg-white hover:text-primary font-medium px-8 py-3"
+              className="bg-white text-primary hover:bg-white/90 font-medium px-8 py-3"
             >
-              Download CV
+              <a
+                href="https://drive.google.com/file/d/12welaYARXNlNMZoKCQQGpy9fEki54n9h/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Download CV
+              </a>
             </Button>
           </div>
 

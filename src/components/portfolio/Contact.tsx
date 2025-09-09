@@ -9,7 +9,7 @@ const contactInfo = [
     value: "0600190804",
     href: "tel:+212600190804",
     color: "text-accent",
-    bgColor: "bg-accent/10"
+    bgColor: "bg-accent/10",
   },
   {
     icon: Mail,
@@ -17,7 +17,7 @@ const contactInfo = [
     value: "yassineharif22@gmail.com",
     href: "mailto:yassineharif22@gmail.com",
     color: "text-tech-blue",
-    bgColor: "bg-tech-blue/10"
+    bgColor: "bg-tech-blue/10",
   },
   {
     icon: MapPin,
@@ -25,8 +25,8 @@ const contactInfo = [
     value: "Casablanca, Morocco",
     href: "#",
     color: "text-primary",
-    bgColor: "bg-primary/10"
-  }
+    bgColor: "bg-primary/10",
+  },
 ];
 
 export const Contact = () => {
@@ -45,8 +45,9 @@ export const Contact = () => {
             </h2>
             <div className="w-24 h-1 bg-accent mx-auto mb-8"></div>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Ready to collaborate or discuss opportunities? I'd love to hear from you. 
-              Let's connect and explore how we can work together.
+              Ready to collaborate or discuss opportunities? I&apos;d love to
+              hear from you. Let&apos;s connect and explore how we can work
+              together.
             </p>
           </div>
 
@@ -62,11 +63,15 @@ export const Contact = () => {
                     className="block"
                     onClick={(e) => contact.href === "#" && e.preventDefault()}
                   >
-                    <div className={`inline-flex items-center justify-center w-14 h-14 ${contact.bgColor} rounded-full mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                    <div
+                      className={`inline-flex items-center justify-center w-14 h-14 ${contact.bgColor} rounded-full mb-4 group-hover:scale-110 transition-transform duration-300`}
+                    >
                       <contact.icon className={`w-7 h-7 ${contact.color}`} />
                     </div>
-                    
-                    <h3 className="font-semibold text-foreground mb-2">{contact.label}</h3>
+
+                    <h3 className="font-semibold text-foreground mb-2">
+                      {contact.label}
+                    </h3>
                     <p className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">
                       {contact.value}
                     </p>
@@ -84,23 +89,30 @@ export const Contact = () => {
                     <Download className="w-8 h-8 text-white" />
                   </div>
                 </div>
-                
+
                 <h3 className="text-2xl font-space-grotesk font-bold text-white mb-4">
                   Download My CV
                 </h3>
-                
+
                 <p className="text-white/90 mb-6 max-w-sm mx-auto">
-                  Get the complete overview of my experience, education, and skills.
+                  Get the complete overview of my experience, education, and
+                  skills.
                 </p>
-                
+
                 <Button
-                  onClick={handleDownloadCV}
+                  asChild
                   variant="secondary"
                   size="lg"
                   className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-3"
                 >
-                  <Download className="w-5 h-5 mr-2" />
-                  Download CV (PDF)
+                  <a
+                    href="https://drive.google.com/file/d/12welaYARXNlNMZoKCQQGpy9fEki54n9h/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Download className="w-5 h-5 mr-2" />
+                    Download CV
+                  </a>
                 </Button>
               </CardContent>
             </Card>
