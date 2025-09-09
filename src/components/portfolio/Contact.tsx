@@ -1,42 +1,34 @@
 import { Mail, Phone, MapPin, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-
-const contactInfo = [
-  {
-    icon: Phone,
-    label: "Phone",
-    value: "0600190804",
-    href: "tel:+212600190804",
-    color: "text-accent",
-    bgColor: "bg-accent/10",
-  },
-  {
-    icon: Mail,
-    label: "Email",
-    value: "yassineharif22@gmail.com",
-    href: "mailto:yassineharif22@gmail.com",
-    color: "text-tech-blue",
-    bgColor: "bg-tech-blue/10",
-  },
-  {
-    icon: MapPin,
-    label: "Location",
-    value: "Casablanca, Morocco",
-    href: "#",
-    color: "text-primary",
-    bgColor: "bg-primary/10",
-  },
-];
-
+const contactInfo = [{
+  icon: Phone,
+  label: "Phone",
+  value: "0600190804",
+  href: "tel:+212600190804",
+  color: "text-accent",
+  bgColor: "bg-accent/10"
+}, {
+  icon: Mail,
+  label: "Email",
+  value: "yassineharif22@gmail.com",
+  href: "mailto:yassineharif22@gmail.com",
+  color: "text-tech-blue",
+  bgColor: "bg-tech-blue/10"
+}, {
+  icon: MapPin,
+  label: "Location",
+  value: "Casablanca, Morocco",
+  href: "#",
+  color: "text-primary",
+  bgColor: "bg-primary/10"
+}];
 export const Contact = () => {
   const handleDownloadCV = () => {
     // In a real implementation, this would trigger the CV download
     console.log("Download CV clicked");
   };
-
-  return (
-    <section id="contact" className="py-20 bg-background">
+  return <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
@@ -52,20 +44,10 @@ export const Contact = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
-            {contactInfo.map((contact, index) => (
-              <Card
-                key={index}
-                className="bg-gradient-card border-border/50 shadow-card hover:shadow-hover transition-all duration-300 group"
-              >
+            {contactInfo.map((contact, index) => <Card key={index} className="bg-gradient-card border-border/50 shadow-card hover:shadow-hover transition-all duration-300 group">
                 <CardContent className="p-6 text-center">
-                  <a
-                    href={contact.href}
-                    className="block"
-                    onClick={(e) => contact.href === "#" && e.preventDefault()}
-                  >
-                    <div
-                      className={`inline-flex items-center justify-center w-14 h-14 ${contact.bgColor} rounded-full mb-4 group-hover:scale-110 transition-transform duration-300`}
-                    >
+                  <a href={contact.href} className="block" onClick={e => contact.href === "#" && e.preventDefault()}>
+                    <div className={`inline-flex items-center justify-center w-14 h-14 ${contact.bgColor} rounded-full mb-4 group-hover:scale-110 transition-transform duration-300`}>
                       <contact.icon className={`w-7 h-7 ${contact.color}`} />
                     </div>
 
@@ -77,8 +59,7 @@ export const Contact = () => {
                     </p>
                   </a>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
 
           <div className="text-center">
@@ -99,17 +80,8 @@ export const Contact = () => {
                   skills.
                 </p>
 
-                <Button
-                  asChild
-                  variant="secondary"
-                  size="lg"
-                  className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-3"
-                >
-                  <a
-                    href="https://drive.google.com/file/d/12welaYARXNlNMZoKCQQGpy9fEki54n9h/view?usp=sharing"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                <Button asChild variant="secondary" size="lg" className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-3">
+                  <a href="https://drive.google.com/file/d/12welaYARXNlNMZoKCQQGpy9fEki54n9h/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                     <Download className="w-5 h-5 mr-2" />
                     Download CV
                   </a>
@@ -124,12 +96,9 @@ export const Contact = () => {
       <div className="mt-20 pt-8 border-t border-border">
         <div className="container mx-auto px-6">
           <div className="text-center">
-            <p className="text-muted-foreground">
-              © 2024 Harif Yassine. Built with passion for excellence.
-            </p>
+            <p className="text-muted-foreground">© 2025 Harif Yassine</p>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
