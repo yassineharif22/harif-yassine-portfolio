@@ -36,6 +36,62 @@ const portfolioItems = [
     image: "/lovable-uploads/b6915bdd-25ed-44b3-b601-9241b424c1f3.png",
     description: "Dark fantasy themed t-shirt design with mystical characters in blue tones.",
   },
+  {
+    id: 5,
+    title: "Anime Character Embroidery Design",
+    category: "Digital Embroidery",
+    image: "/lovable-uploads/embroidery-design-1.png",
+    description: "Detailed anime character embroidery pattern with purple energy effects and dynamic poses.",
+  },
+  {
+    id: 6,
+    title: "Multi-Character Embroidery Design",
+    category: "Digital Embroidery", 
+    image: "/lovable-uploads/embroidery-design-2.png",
+    description: "Complex embroidery design featuring multiple anime characters with vibrant colors and intricate details.",
+  },
+  {
+    id: 7,
+    title: "Pink Hair Character Embroidery",
+    category: "Digital Embroidery",
+    image: "/lovable-uploads/embroidery-design-3.png",
+    description: "Anime character embroidery design with pink hair and detailed facial expressions for textile applications.",
+  },
+  {
+    id: 8,
+    title: "Golden Warrior T-Shirt Design",
+    category: "Print on Demand",
+    image: "/lovable-uploads/tshirt-dark-fantasy.png",
+    description: "Epic dark fantasy t-shirt design featuring a golden warrior with mystical elements and dramatic lighting.",
+  },
+  {
+    id: 9,
+    title: "No Pain No Gain Motivational Design",
+    category: "Print on Demand",
+    image: "/lovable-uploads/tshirt-no-pain-no-gain.png",
+    description: "Motivational fitness t-shirt design with powerful character and inspiring typography in black and white.",
+  },
+  {
+    id: 10,
+    title: "Anime Character T-Shirt Design",
+    category: "Print on Demand",
+    image: "/lovable-uploads/tshirt-anime-1.png",
+    description: "Monochrome anime-inspired t-shirt design with dynamic character pose and detailed linework.",
+  },
+  {
+    id: 11,
+    title: "One Piece Ace T-Shirt Design",
+    category: "Print on Demand",
+    image: "/lovable-uploads/tshirt-anime-ace.png",
+    description: "One Piece inspired t-shirt design featuring Portgas D. Ace with signature hat and flame effects.",
+  },
+  {
+    id: 12,
+    title: "Samurai T-Shirt Design",
+    category: "Print on Demand",
+    image: "/lovable-uploads/tshirt-samurai.png",
+    description: "Traditional samurai-inspired t-shirt design with detailed armor and weapons in artistic black and white style.",
+  },
 ];
 
 export const Portfolio = () => {
