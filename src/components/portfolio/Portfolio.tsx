@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -6,6 +7,14 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
+import { Badge } from "@/components/ui/badge";
 
 const portfolioItems = [
   {
@@ -95,6 +104,19 @@ const portfolioItems = [
 ];
 
 export const Portfolio = () => {
+  const [selectedProject, setSelectedProject] = useState<typeof portfolioItems[0] | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = (project: typeof portfolioItems[0]) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedProject(null);
+  };
+
   return (
     <section id="portfolio" className="py-20 bg-gradient-section">
       <div className="container mx-auto px-6">
@@ -120,7 +142,10 @@ export const Portfolio = () => {
             <CarouselContent className="-ml-2 md:-ml-4">
               {portfolioItems.map((item) => (
                 <CarouselItem key={item.id} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                  <Card className="bg-gradient-card border-border/50 shadow-card hover:shadow-hover transition-all duration-300 group overflow-hidden">
+                  <Card 
+                    className="bg-gradient-card border-border/50 shadow-card hover:shadow-hover transition-all duration-300 group overflow-hidden cursor-pointer"
+                    onClick={() => openModal(item)}
+                  >
                     <CardContent className="p-0">
                       <div className="aspect-square overflow-hidden">
                         <img
@@ -152,6 +177,57 @@ export const Portfolio = () => {
           </Carousel>
         </div>
       </div>
+
+      {/* Project Details Modal */}
+      <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+          {selectedProject && (
+            <>
+              <DialogHeader>
+                <div className="flex items-center gap-3 mb-4">
+                  <Badge variant="secondary" className="bg-accent/10 text-accent">
+                    {selectedProject.category}
+                  </Badge>
+                </div>
+                <DialogTitle className="text-2xl font-space-grotesk font-bold text-primary text-left">
+                  {selectedProject.title}
+                </DialogTitle>
+                <DialogDescription className="text-muted-foreground text-left text-base leading-relaxed">
+                  {selectedProject.description}
+                </DialogDescription>
+              </DialogHeader>
+              
+              <div className="mt-6">
+                <div className="aspect-video w-full overflow-hidden rounded-lg border bg-muted/50">
+                  <img
+                    src={selectedProject.image}
+                    alt={selectedProject.title}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
+
+              <div className="mt-6 p-6 bg-gradient-card rounded-lg border border-border/50">
+                <h4 className="font-space-grotesk font-semibold text-primary mb-3">
+                  Project Details
+                </h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                  <div>
+                    <span className="font-medium text-primary">Category:</span>
+                    <span className="ml-2 text-muted-foreground">{selectedProject.category}</span>
+                  </div>
+                  <div>
+                    <span className="font-medium text-primary">Type:</span>
+                    <span className="ml-2 text-muted-foreground">
+                      {selectedProject.category === "Digital Embroidery" ? "Embroidery Pattern" : "T-Shirt Design"}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
