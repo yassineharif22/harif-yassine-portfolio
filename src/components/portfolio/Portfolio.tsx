@@ -106,6 +106,7 @@ const portfolioItems = [
 export const Portfolio = () => {
   const [selectedProject, setSelectedProject] = useState<typeof portfolioItems[0] | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isImageZoomed, setIsImageZoomed] = useState(false);
 
   const openModal = (project: typeof portfolioItems[0]) => {
     setSelectedProject(project);
@@ -115,6 +116,11 @@ export const Portfolio = () => {
   const closeModal = () => {
     setIsModalOpen(false);
     setSelectedProject(null);
+    setIsImageZoomed(false);
+  };
+
+  const toggleImageZoom = () => {
+    setIsImageZoomed(!isImageZoomed);
   };
 
   return (
@@ -180,7 +186,7 @@ export const Portfolio = () => {
 
       {/* Project Details Modal */}
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+        <DialogContent className="max-w-2xl md:max-w-4xl mx-4 max-h-[85vh] overflow-y-auto rounded-2xl">
           {selectedProject && (
             <>
               <DialogHeader>
@@ -189,29 +195,34 @@ export const Portfolio = () => {
                     {selectedProject.category}
                   </Badge>
                 </div>
-                <DialogTitle className="text-2xl font-space-grotesk font-bold text-primary text-left">
+                <DialogTitle className="text-xl md:text-2xl font-space-grotesk font-bold text-primary text-left">
                   {selectedProject.title}
                 </DialogTitle>
-                <DialogDescription className="text-muted-foreground text-left text-base leading-relaxed">
+                <DialogDescription className="text-muted-foreground text-left text-sm md:text-base leading-relaxed">
                   {selectedProject.description}
                 </DialogDescription>
               </DialogHeader>
               
               <div className="mt-6">
-                <div className="aspect-video w-full overflow-hidden rounded-lg border bg-muted/50">
+                <div className="aspect-video w-full overflow-hidden rounded-lg border bg-muted/50 cursor-pointer group" onClick={toggleImageZoom}>
                   <img
                     src={selectedProject.image}
                     alt={selectedProject.title}
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                   />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/20 transition-colors duration-300">
+                    <span className="text-white/0 group-hover:text-white/90 transition-colors duration-300 text-sm font-medium">
+                      Click to zoom
+                    </span>
+                  </div>
                 </div>
               </div>
 
-              <div className="mt-6 p-6 bg-gradient-card rounded-lg border border-border/50">
-                <h4 className="font-space-grotesk font-semibold text-primary mb-3">
+              <div className="mt-6 p-4 md:p-6 bg-gradient-card rounded-lg border border-border/50">
+                <h4 className="font-space-grotesk font-semibold text-primary mb-3 text-sm md:text-base">
                   Project Details
                 </h4>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs md:text-sm">
                   <div>
                     <span className="font-medium text-primary">Category:</span>
                     <span className="ml-2 text-muted-foreground">{selectedProject.category}</span>
@@ -225,6 +236,30 @@ export const Portfolio = () => {
                 </div>
               </div>
             </>
+          )}
+        </DialogContent>
+      </Dialog>
+
+      {/* Image Zoom Modal */}
+      <Dialog open={isImageZoomed} onOpenChange={setIsImageZoomed}>
+        <DialogContent className="max-w-7xl w-[95vw] h-[95vh] bg-black/95 border-none p-2 md:p-4">
+          {selectedProject && (
+            <div className="relative w-full h-full flex items-center justify-center">
+              <img
+                src={selectedProject.image}
+                alt={selectedProject.title}
+                className="max-w-full max-h-full object-contain"
+              />
+              <button
+                onClick={() => setIsImageZoomed(false)}
+                className="absolute top-2 right-2 md:top-4 md:right-4 bg-white/10 hover:bg-white/20 text-white rounded-full p-2 transition-colors duration-200"
+                aria-label="Close zoom view"
+              >
+                <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
           )}
         </DialogContent>
       </Dialog>
