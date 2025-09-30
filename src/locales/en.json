@@ -7,5 +7,194 @@
     "skills": "Skills",
     "contact": "Contact",
     "downloadCV": "Download CV"
+  },
+  "hero": {
+    "name": "HARIF YASSINE",
+    "title": "Specialized Technician in Electromechanics of Automated Systems",
+    "location": "Casablanca, Morocco",
+    "description": "Passionate electromechanics engineer with expertise in automated systems, maintenance management, and industrial operations. Driven by innovation and precision.",
+    "exploreWork": "Explore My Work",
+    "downloadCV": "Download CV"
+  },
+  "about": {
+    "title": "About Me",
+    "paragraph1": "I am a dedicated Electromechanics Technician specialized in Automated Systems with a strong foundation in industrial maintenance and operations. My experience spans across different sectors, from textile manufacturing to logistics operations at major facilities like Tanger Med.",
+    "paragraph2": "I combine technical expertise with practical problem-solving skills, always striving for operational excellence and system optimization. My passion for technology extends beyond work, including graphic design and continuous learning.",
+    "location": "Based in Casablanca, Morocco",
+    "age": "Age",
+    "ageValue": "27 years",
+    "experience": "Experience",
+    "experienceValue": "5+ years",
+    "languages": "Languages",
+    "languagesValue": "Arabic, French, English",
+    "license": "License",
+    "licenseValue": "Type B Driving License"
+  },
+  "education": {
+    "title": "Education",
+    "subtitle": "My educational journey has provided a solid foundation in technical expertise and scientific thinking.",
+    "degree1": "Specialized Technician Diploma",
+    "field1": "Electromechanics of Automated Systems",
+    "institution1": "ISTA Casablanca",
+    "period1": "2022–2024",
+    "description1": "Advanced technical training in electromechanical systems, automation, industrial maintenance, and control systems.",
+    "highlight1_1": "Automation & Control Systems",
+    "highlight1_2": "Industrial Maintenance",
+    "highlight1_3": "Electrical Engineering",
+    "highlight1_4": "Mechanical Systems",
+    "degree2": "Baccalaureate",
+    "field2": "Life and Earth Sciences",
+    "institution2": "Lycée WELLADA, Casablanca",
+    "period2": "2012–2015",
+    "description2": "Secondary education with focus on scientific principles and analytical thinking.",
+    "highlight2_1": "Scientific Foundation",
+    "highlight2_2": "Analytical Skills",
+    "highlight2_3": "Research Methods",
+    "highlight2_4": "Academic Excellence"
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "subtitle": "My professional journey spans diverse industrial environments, from manufacturing to major logistics operations.",
+    "title1": "Equipment Operator",
+    "company1": "Insimaroc – Tanger Med",
+    "location1": "Tanger, Morocco",
+    "period1": "Aug–Sep 2022",
+    "type1": "Contract",
+    "description1": "Specialized in logistics operations at one of Africa's largest ports, managing critical equipment and cargo operations.",
+    "responsibility1_1": "Handling, transfer, and loading of goods using specialized equipment",
+    "responsibility1_2": "Machine monitoring and operational reporting for optimal efficiency",
+    "responsibility1_3": "Organizing and recording moved products with precision tracking",
+    "responsibility1_4": "Ensuring safety protocols and equipment maintenance standards",
+    "skill1_1": "Equipment Operation",
+    "skill1_2": "Logistics Management",
+    "skill1_3": "Safety Protocols",
+    "skill1_4": "Data Recording",
+    "title2": "Machine Operator",
+    "company2": "Plastima",
+    "location2": "Casablanca, Morocco",
+    "period2": "2017–2018",
+    "type2": "Full-time",
+    "description2": "Operated and maintained industrial machinery in a manufacturing environment, focusing on operational excellence and problem-solving.",
+    "responsibility2_1": "Repaired technical problems on production machines",
+    "responsibility2_2": "Maintained smooth factory operations and production flow",
+    "responsibility2_3": "Performed preventive maintenance and troubleshooting",
+    "responsibility2_4": "Collaborated with technical teams for system optimization",
+    "skill2_1": "Machine Maintenance",
+    "skill2_2": "Troubleshooting",
+    "skill2_3": "Technical Repair",
+    "skill2_4": "Team Collaboration",
+    "keyResponsibilities": "Key Responsibilities",
+    "skillsApplied": "Skills Applied"
+  },
+  "portfolio": {
+    "title": "My Portfolio",
+    "subtitle": "Showcasing my graphic design work including textile printing, embroidery patterns, and print-on-demand designs for various clients and projects.",
+    "clickToZoom": "Click to zoom",
+    "projectDetails": "Project Details",
+    "category": "Category",
+    "type": "Type",
+    "embroideryPattern": "Embroidery Pattern",
+    "tshirtDesign": "T-Shirt Design"
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "subtitle": "A comprehensive overview of my technical competencies and areas of expertise.",
+    "category1": "Technical Expertise",
+    "skill1_1": "Electromechanics",
+    "skill1_2": "Maintenance Management",
+    "skill1_3": "Automation Systems",
+    "skill1_4": "Electronics",
+    "skill1_5": "Mechanics",
+    "category2": "Software & Tools",
+    "skill2_1": "Office Tools",
+    "skill2_2": "Database Management",
+    "skill2_3": "Machine Monitoring Systems",
+    "skill2_4": "Technical Documentation",
+    "category3": "Creative Skills",
+    "skill3_1": "Graphic Design",
+    "skill3_2": "Textile Printing Design",
+    "skill3_3": "Embroidery Patterns",
+    "skill3_4": "Clothing Design",
+    "category4": "Data Management",
+    "skill4_1": "Product Recording",
+    "skill4_2": "Inventory Management",
+    "skill4_3": "Quality Control",
+    "skill4_4": "Reporting Systems",
+    "levelExpert": "Expert",
+    "levelAdvanced": "Advanced",
+    "levelIntermediate": "Intermediate"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Ready to collaborate or discuss opportunities? I'd love to hear from you. Let's connect and explore how we can work together.",
+    "phone": "Phone",
+    "email": "Email",
+    "location": "Location",
+    "downloadCVTitle": "Download My CV",
+    "downloadCVSubtitle": "Get the complete overview of my experience, education, and skills.",
+    "downloadCV": "Download CV",
+    "footer": "© 2025 Harif Yassine"
+  },
+  "projects": {
+    "project1": {
+      "title": "Character Design - Embroidery Pattern",
+      "category": "Digital Embroidery",
+      "description": "Custom character design created for embroidery applications using professional digitizing software."
+    },
+    "project2": {
+      "title": "Moroccan Coat of Arms - Embroidery",
+      "category": "Cultural Design",
+      "description": "Traditional Moroccan coat of arms digitized for embroidery on various textile products."
+    },
+    "project3": {
+      "title": "One Piece Anime T-Shirt Design",
+      "category": "Print on Demand",
+      "description": "Anime-inspired t-shirt design featuring One Piece characters with vibrant color scheme."
+    },
+    "project4": {
+      "title": "Dark Fantasy T-Shirt Design",
+      "category": "Print on Demand",
+      "description": "Dark fantasy themed t-shirt design with mystical characters in blue tones."
+    },
+    "project5": {
+      "title": "Anime Character Embroidery Design",
+      "category": "Digital Embroidery",
+      "description": "Detailed anime character embroidery pattern with purple energy effects and dynamic poses."
+    },
+    "project6": {
+      "title": "Multi-Character Embroidery Design",
+      "category": "Digital Embroidery",
+      "description": "Complex embroidery design featuring multiple anime characters with vibrant colors and intricate details."
+    },
+    "project7": {
+      "title": "Pink Hair Character Embroidery",
+      "category": "Digital Embroidery",
+      "description": "Anime character embroidery design with pink hair and detailed facial expressions for textile applications."
+    },
+    "project8": {
+      "title": "Golden Warrior T-Shirt Design",
+      "category": "Print on Demand",
+      "description": "Epic dark fantasy t-shirt design featuring a golden warrior with mystical elements and dramatic lighting."
+    },
+    "project9": {
+      "title": "No Pain No Gain Motivational Design",
+      "category": "Print on Demand",
+      "description": "Motivational fitness t-shirt design with powerful character and inspiring typography in black and white."
+    },
+    "project10": {
+      "title": "Anime Character T-Shirt Design",
+      "category": "Print on Demand",
+      "description": "Monochrome anime-inspired t-shirt design with dynamic character pose and detailed linework."
+    },
+    "project11": {
+      "title": "One Piece Ace T-Shirt Design",
+      "category": "Print on Demand",
+      "description": "One Piece inspired t-shirt design featuring Portgas D. Ace with signature hat and flame effects."
+    },
+    "project12": {
+      "title": "Samurai T-Shirt Design",
+      "category": "Print on Demand",
+      "description": "Traditional samurai-inspired t-shirt design with detailed armor and weapons in artistic black and white style."
+    }
   }
 }

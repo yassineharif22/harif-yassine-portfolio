@@ -7,5 +7,194 @@
     "skills": "Compétences",
     "contact": "Contact",
     "downloadCV": "Télécharger CV"
+  },
+  "hero": {
+    "name": "HARIF YASSINE",
+    "title": "Technicien Spécialisé en Électromécanique des Systèmes Automatisés",
+    "location": "Casablanca, Maroc",
+    "description": "Ingénieur en électromécanique passionné avec une expertise en systèmes automatisés, gestion de la maintenance et opérations industrielles. Motivé par l'innovation et la précision.",
+    "exploreWork": "Découvrir Mon Travail",
+    "downloadCV": "Télécharger CV"
+  },
+  "about": {
+    "title": "À Propos de Moi",
+    "paragraph1": "Je suis un Technicien en Électromécanique dévoué, spécialisé dans les Systèmes Automatisés avec une solide base en maintenance industrielle et opérations. Mon expérience s'étend à différents secteurs, de la fabrication textile aux opérations logistiques dans des installations majeures comme Tanger Med.",
+    "paragraph2": "Je combine expertise technique et compétences pratiques en résolution de problèmes, visant toujours l'excellence opérationnelle et l'optimisation des systèmes. Ma passion pour la technologie s'étend au-delà du travail, incluant le design graphique et l'apprentissage continu.",
+    "location": "Basé à Casablanca, Maroc",
+    "age": "Âge",
+    "ageValue": "27 ans",
+    "experience": "Expérience",
+    "experienceValue": "5+ ans",
+    "languages": "Langues",
+    "languagesValue": "Arabe, Français, Anglais",
+    "license": "Permis",
+    "licenseValue": "Permis de Conduire Type B"
+  },
+  "education": {
+    "title": "Formation",
+    "subtitle": "Mon parcours éducatif a fourni une base solide en expertise technique et pensée scientifique.",
+    "degree1": "Diplôme de Technicien Spécialisé",
+    "field1": "Électromécanique des Systèmes Automatisés",
+    "institution1": "ISTA Casablanca",
+    "period1": "2022–2024",
+    "description1": "Formation technique avancée en systèmes électromécaniques, automation, maintenance industrielle et systèmes de contrôle.",
+    "highlight1_1": "Automation & Systèmes de Contrôle",
+    "highlight1_2": "Maintenance Industrielle",
+    "highlight1_3": "Ingénierie Électrique",
+    "highlight1_4": "Systèmes Mécaniques",
+    "degree2": "Baccalauréat",
+    "field2": "Sciences de la Vie et de la Terre",
+    "institution2": "Lycée WELLADA, Casablanca",
+    "period2": "2012–2015",
+    "description2": "Éducation secondaire axée sur les principes scientifiques et la pensée analytique.",
+    "highlight2_1": "Fondation Scientifique",
+    "highlight2_2": "Compétences Analytiques",
+    "highlight2_3": "Méthodes de Recherche",
+    "highlight2_4": "Excellence Académique"
+  },
+  "experience": {
+    "title": "Expérience Professionnelle",
+    "subtitle": "Mon parcours professionnel couvre divers environnements industriels, de la fabrication aux grandes opérations logistiques.",
+    "title1": "Opérateur d'Équipement",
+    "company1": "Insimaroc – Tanger Med",
+    "location1": "Tanger, Maroc",
+    "period1": "Août–Sept 2022",
+    "type1": "Contrat",
+    "description1": "Spécialisé dans les opérations logistiques de l'un des plus grands ports d'Afrique, gérant des équipements critiques et des opérations de fret.",
+    "responsibility1_1": "Manipulation, transfert et chargement de marchandises avec équipement spécialisé",
+    "responsibility1_2": "Surveillance des machines et rapports opérationnels pour une efficacité optimale",
+    "responsibility1_3": "Organisation et enregistrement des produits déplacés avec suivi de précision",
+    "responsibility1_4": "Garantie des protocoles de sécurité et normes de maintenance des équipements",
+    "skill1_1": "Opération d'Équipement",
+    "skill1_2": "Gestion Logistique",
+    "skill1_3": "Protocoles de Sécurité",
+    "skill1_4": "Enregistrement de Données",
+    "title2": "Opérateur de Machine",
+    "company2": "Plastima",
+    "location2": "Casablanca, Maroc",
+    "period2": "2017–2018",
+    "type2": "Temps plein",
+    "description2": "Exploitation et maintenance de machines industrielles dans un environnement de fabrication, axé sur l'excellence opérationnelle et la résolution de problèmes.",
+    "responsibility2_1": "Réparation des problèmes techniques sur les machines de production",
+    "responsibility2_2": "Maintien d'opérations d'usine fluides et de flux de production",
+    "responsibility2_3": "Maintenance préventive et dépannage",
+    "responsibility2_4": "Collaboration avec les équipes techniques pour l'optimisation du système",
+    "skill2_1": "Maintenance de Machines",
+    "skill2_2": "Dépannage",
+    "skill2_3": "Réparation Technique",
+    "skill2_4": "Collaboration d'Équipe",
+    "keyResponsibilities": "Responsabilités Clés",
+    "skillsApplied": "Compétences Appliquées"
+  },
+  "portfolio": {
+    "title": "Mon Portfolio",
+    "subtitle": "Présentation de mon travail de design graphique incluant l'impression textile, les motifs de broderie et les designs d'impression à la demande pour divers clients et projets.",
+    "clickToZoom": "Cliquer pour zoomer",
+    "projectDetails": "Détails du Projet",
+    "category": "Catégorie",
+    "type": "Type",
+    "embroideryPattern": "Motif de Broderie",
+    "tshirtDesign": "Design de T-Shirt"
+  },
+  "skills": {
+    "title": "Compétences Techniques",
+    "subtitle": "Un aperçu complet de mes compétences techniques et domaines d'expertise.",
+    "category1": "Expertise Technique",
+    "skill1_1": "Électromécanique",
+    "skill1_2": "Gestion de la Maintenance",
+    "skill1_3": "Systèmes d'Automatisation",
+    "skill1_4": "Électronique",
+    "skill1_5": "Mécanique",
+    "category2": "Logiciels & Outils",
+    "skill2_1": "Outils Bureautiques",
+    "skill2_2": "Gestion de Base de Données",
+    "skill2_3": "Systèmes de Surveillance des Machines",
+    "skill2_4": "Documentation Technique",
+    "category3": "Compétences Créatives",
+    "skill3_1": "Design Graphique",
+    "skill3_2": "Design d'Impression Textile",
+    "skill3_3": "Motifs de Broderie",
+    "skill3_4": "Design de Vêtements",
+    "category4": "Gestion de Données",
+    "skill4_1": "Enregistrement de Produits",
+    "skill4_2": "Gestion des Stocks",
+    "skill4_3": "Contrôle Qualité",
+    "skill4_4": "Systèmes de Rapport",
+    "levelExpert": "Expert",
+    "levelAdvanced": "Avancé",
+    "levelIntermediate": "Intermédiaire"
+  },
+  "contact": {
+    "title": "Contactez-Moi",
+    "subtitle": "Prêt à collaborer ou discuter d'opportunités? J'aimerais avoir de vos nouvelles. Connectons-nous et explorons comment nous pouvons travailler ensemble.",
+    "phone": "Téléphone",
+    "email": "Email",
+    "location": "Localisation",
+    "downloadCVTitle": "Télécharger Mon CV",
+    "downloadCVSubtitle": "Obtenez l'aperçu complet de mon expérience, formation et compétences.",
+    "downloadCV": "Télécharger CV",
+    "footer": "© 2025 Harif Yassine"
+  },
+  "projects": {
+    "project1": {
+      "title": "Design de Personnage - Motif de Broderie",
+      "category": "Broderie Numérique",
+      "description": "Design de personnage personnalisé créé pour applications de broderie utilisant un logiciel de numérisation professionnel."
+    },
+    "project2": {
+      "title": "Armoiries Marocaines - Broderie",
+      "category": "Design Culturel",
+      "description": "Armoiries marocaines traditionnelles numérisées pour broderie sur divers produits textiles."
+    },
+    "project3": {
+      "title": "Design de T-Shirt Anime One Piece",
+      "category": "Impression à la Demande",
+      "description": "Design de t-shirt inspiré de l'anime avec personnages de One Piece et palette de couleurs vibrantes."
+    },
+    "project4": {
+      "title": "Design de T-Shirt Fantasy Sombre",
+      "category": "Impression à la Demande",
+      "description": "Design de t-shirt thème fantasy sombre avec personnages mystiques en tons bleus."
+    },
+    "project5": {
+      "title": "Design de Broderie Personnage Anime",
+      "category": "Broderie Numérique",
+      "description": "Motif de broderie de personnage anime détaillé avec effets d'énergie violette et poses dynamiques."
+    },
+    "project6": {
+      "title": "Design de Broderie Multi-Personnages",
+      "category": "Broderie Numérique",
+      "description": "Design de broderie complexe avec plusieurs personnages anime aux couleurs vibrantes et détails complexes."
+    },
+    "project7": {
+      "title": "Broderie Personnage aux Cheveux Roses",
+      "category": "Broderie Numérique",
+      "description": "Design de broderie de personnage anime aux cheveux roses et expressions faciales détaillées pour applications textiles."
+    },
+    "project8": {
+      "title": "Design de T-Shirt Guerrier Doré",
+      "category": "Impression à la Demande",
+      "description": "Design de t-shirt fantasy sombre épique avec guerrier doré, éléments mystiques et éclairage dramatique."
+    },
+    "project9": {
+      "title": "Design Motivationnel No Pain No Gain",
+      "category": "Impression à la Demande",
+      "description": "Design de t-shirt fitness motivationnel avec personnage puissant et typographie inspirante en noir et blanc."
+    },
+    "project10": {
+      "title": "Design de T-Shirt Personnage Anime",
+      "category": "Impression à la Demande",
+      "description": "Design de t-shirt monochrome inspiré de l'anime avec pose dynamique et trait détaillé."
+    },
+    "project11": {
+      "title": "Design de T-Shirt One Piece Ace",
+      "category": "Impression à la Demande",
+      "description": "Design de t-shirt inspiré de One Piece avec Portgas D. Ace, son chapeau signature et effets de flammes."
+    },
+    "project12": {
+      "title": "Design de T-Shirt Samouraï",
+      "category": "Impression à la Demande",
+      "description": "Design de t-shirt inspiré du samouraï traditionnel avec armure et armes détaillées dans un style artistique noir et blanc."
+    }
   }
 }

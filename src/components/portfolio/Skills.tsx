@@ -1,57 +1,6 @@
 import { Wrench, Database, Palette, Monitor } from "lucide-react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-
-const skillCategories = [
-  {
-    title: "Technical Expertise",
-    icon: Wrench,
-    color: "text-accent",
-    bgColor: "bg-accent/10",
-    skills: [
-      { name: "Electromechanics", level: "Expert" },
-      { name: "Maintenance Management", level: "Advanced" },
-      { name: "Automation Systems", level: "Advanced" },
-      { name: "Electronics", level: "Intermediate" },
-      { name: "Mechanics", level: "Advanced" }
-    ]
-  },
-  {
-    title: "Software & Tools",
-    icon: Monitor,
-    color: "text-tech-blue",
-    bgColor: "bg-tech-blue/10",
-    skills: [
-      { name: "Office Tools", level: "Advanced" },
-      { name: "Database Management", level: "Intermediate" },
-      { name: "Machine Monitoring Systems", level: "Advanced" },
-      { name: "Technical Documentation", level: "Expert" }
-    ]
-  },
-  {
-    title: "Creative Skills",
-    icon: Palette,
-    color: "text-primary",
-    bgColor: "bg-primary/10",
-    skills: [
-      { name: "Graphic Design", level: "Advanced" },
-      { name: "Textile Printing Design", level: "Expert" },
-      { name: "Embroidery Patterns", level: "Advanced" },
-      { name: "Clothing Design", level: "Intermediate" }
-    ]
-  },
-  {
-    title: "Data Management",
-    icon: Database,
-    color: "text-secondary-foreground",
-    bgColor: "bg-secondary",
-    skills: [
-      { name: "Product Recording", level: "Expert" },
-      { name: "Inventory Management", level: "Advanced" },
-      { name: "Quality Control", level: "Advanced" },
-      { name: "Reporting Systems", level: "Advanced" }
-    ]
-  }
-];
+import { useTranslation } from "react-i18next";
 
 const getLevelColor = (level: string) => {
   switch (level) {
@@ -67,17 +16,71 @@ const getLevelColor = (level: string) => {
 };
 
 export const Skills = () => {
+  const { t } = useTranslation();
+  
+  const skillCategories = [
+    {
+      title: t("skills.category1"),
+      icon: Wrench,
+      color: "text-accent",
+      bgColor: "bg-accent/10",
+      skills: [
+        { name: t("skills.skill1_1"), level: t("skills.levelExpert") },
+        { name: t("skills.skill1_2"), level: t("skills.levelAdvanced") },
+        { name: t("skills.skill1_3"), level: t("skills.levelAdvanced") },
+        { name: t("skills.skill1_4"), level: t("skills.levelIntermediate") },
+        { name: t("skills.skill1_5"), level: t("skills.levelAdvanced") }
+      ]
+    },
+    {
+      title: t("skills.category2"),
+      icon: Monitor,
+      color: "text-tech-blue",
+      bgColor: "bg-tech-blue/10",
+      skills: [
+        { name: t("skills.skill2_1"), level: t("skills.levelAdvanced") },
+        { name: t("skills.skill2_2"), level: t("skills.levelIntermediate") },
+        { name: t("skills.skill2_3"), level: t("skills.levelAdvanced") },
+        { name: t("skills.skill2_4"), level: t("skills.levelExpert") }
+      ]
+    },
+    {
+      title: t("skills.category3"),
+      icon: Palette,
+      color: "text-primary",
+      bgColor: "bg-primary/10",
+      skills: [
+        { name: t("skills.skill3_1"), level: t("skills.levelAdvanced") },
+        { name: t("skills.skill3_2"), level: t("skills.levelExpert") },
+        { name: t("skills.skill3_3"), level: t("skills.levelAdvanced") },
+        { name: t("skills.skill3_4"), level: t("skills.levelIntermediate") }
+      ]
+    },
+    {
+      title: t("skills.category4"),
+      icon: Database,
+      color: "text-secondary-foreground",
+      bgColor: "bg-secondary",
+      skills: [
+        { name: t("skills.skill4_1"), level: t("skills.levelExpert") },
+        { name: t("skills.skill4_2"), level: t("skills.levelAdvanced") },
+        { name: t("skills.skill4_3"), level: t("skills.levelAdvanced") },
+        { name: t("skills.skill4_4"), level: t("skills.levelAdvanced") }
+      ]
+    }
+  ];
+
   return (
     <section id="skills" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-space-grotesk font-bold text-primary mb-6">
-              Technical Skills
+              {t("skills.title")}
             </h2>
             <div className="w-24 h-1 bg-accent mx-auto mb-8"></div>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              A comprehensive overview of my technical competencies and areas of expertise.
+              {t("skills.subtitle")}
             </p>
           </div>
 

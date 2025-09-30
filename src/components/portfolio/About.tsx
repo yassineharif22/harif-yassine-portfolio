@@ -1,22 +1,25 @@
 import { User, Calendar, Languages, Car } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-
-const personalInfo = [
-  { icon: User, label: "Age", value: "27 years" },
-  { icon: Calendar, label: "Experience", value: "5+ years" },
-  { icon: Languages, label: "Languages", value: "Arabic, French, English" },
-  { icon: Car, label: "License", value: "Type B Driving License" },
-];
+import { useTranslation } from "react-i18next";
 
 export const About = () => {
+  const { t } = useTranslation();
+  
+  const personalInfo = [
+    { icon: User, label: t("about.age"), value: t("about.ageValue") },
+    { icon: Calendar, label: t("about.experience"), value: t("about.experienceValue") },
+    { icon: Languages, label: t("about.languages"), value: t("about.languagesValue") },
+    { icon: Car, label: t("about.license"), value: t("about.licenseValue") },
+  ];
+
   return (
     <section id="about" className="py-20 bg-gradient-section">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-space-grotesk font-bold text-primary mb-6">
-              About Me
+              {t("about.title")}
             </h2>
             <div className="w-24 h-1 bg-accent mx-auto mb-8"></div>
           </div>
@@ -24,25 +27,18 @@ export const About = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="text-lg text-foreground leading-relaxed">
-                I am a dedicated Electromechanics Technician specialized in
-                Automated Systems with a strong foundation in industrial
-                maintenance and operations. My experience spans across different
-                sectors, from textile manufacturing to logistics operations at
-                major facilities like Tanger Med.
+                {t("about.paragraph1")}
               </p>
 
               <p className="text-lg text-foreground leading-relaxed">
-                I combine technical expertise with practical problem-solving
-                skills, always striving for operational excellence and system
-                optimization. My passion for technology extends beyond work,
-                including graphic design and continuous learning.
+                {t("about.paragraph2")}
               </p>
 
               <div className="flex items-center gap-4 pt-4">
                 <div className="flex items-center text-accent">
                   <div className="w-3 h-3 bg-accent rounded-full mr-3"></div>
                   <span className="font-medium">
-                    Based in Casablanca, Morocco
+                    {t("about.location")}
                   </span>
                 </div>
                 <Button
@@ -68,7 +64,7 @@ export const About = () => {
                         <path d="M12 5v14m0 0l-7-7m7 7l7-7" />
                       </svg>
                     </span>
-                    Download CV
+                    {t("nav.downloadCV")}
                   </a>
                 </Button>
               </div>

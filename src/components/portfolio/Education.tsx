@@ -1,38 +1,40 @@
 import { GraduationCap, Calendar } from "lucide-react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-
-const educationData = [
-  {
-    degree: "Specialized Technician Diploma",
-    field: "Electromechanics of Automated Systems",
-    institution: "ISTA Casablanca",
-    period: "2022–2024",
-    description: "Advanced technical training in electromechanical systems, automation, industrial maintenance, and control systems.",
-    highlights: ["Automation & Control Systems", "Industrial Maintenance", "Electrical Engineering", "Mechanical Systems"]
-  },
-  {
-    degree: "Baccalaureate",
-    field: "Life and Earth Sciences",
-    institution: "Lycée WELLADA, Casablanca",
-    period: "2012–2015",
-    description: "Secondary education with focus on scientific principles and analytical thinking.",
-    highlights: ["Scientific Foundation", "Analytical Skills", "Research Methods", "Academic Excellence"]
-  }
-];
+import { useTranslation } from "react-i18next";
 
 export const Education = () => {
+  const { t } = useTranslation();
+  
+  const educationData = [
+    {
+      degree: t("education.degree1"),
+      field: t("education.field1"),
+      institution: t("education.institution1"),
+      period: t("education.period1"),
+      description: t("education.description1"),
+      highlights: [t("education.highlight1_1"), t("education.highlight1_2"), t("education.highlight1_3"), t("education.highlight1_4")]
+    },
+    {
+      degree: t("education.degree2"),
+      field: t("education.field2"),
+      institution: t("education.institution2"),
+      period: t("education.period2"),
+      description: t("education.description2"),
+      highlights: [t("education.highlight2_1"), t("education.highlight2_2"), t("education.highlight2_3"), t("education.highlight2_4")]
+    }
+  ];
+
   return (
     <section id="education" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-space-grotesk font-bold text-primary mb-6">
-              Education
+              {t("education.title")}
             </h2>
             <div className="w-24 h-1 bg-accent mx-auto mb-8"></div>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              My educational journey has provided a solid foundation in technical expertise 
-              and scientific thinking.
+              {t("education.subtitle")}
             </p>
           </div>
 

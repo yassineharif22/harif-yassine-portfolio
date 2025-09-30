@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
+import { useTranslation } from "react-i18next";
 import {
   Carousel,
   CarouselContent,
@@ -16,94 +17,95 @@ import {
 } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 
-const portfolioItems = [
-  {
-    id: 1,
-    title: "Character Design - Embroidery Pattern",
-    category: "Digital Embroidery",
-    image: "/lovable-uploads/8021fd02-cb3d-4732-b35b-988e0243718d.png",
-    description: "Custom character design created for embroidery applications using professional digitizing software.",
-  },
-  {
-    id: 2,
-    title: "Moroccan Coat of Arms - Embroidery",
-    category: "Cultural Design",
-    image: "/lovable-uploads/2bcee6e4-b1d1-4a0c-91a8-5e7103f4a9ea.png",
-    description: "Traditional Moroccan coat of arms digitized for embroidery on various textile products.",
-  },
-  {
-    id: 3,
-    title: "One Piece Anime T-Shirt Design",
-    category: "Print on Demand",
-    image: "/lovable-uploads/8b0e12f9-db81-4926-9f7e-6606b84730d2.png",
-    description: "Anime-inspired t-shirt design featuring One Piece characters with vibrant color scheme.",
-  },
-  {
-    id: 4,
-    title: "Dark Fantasy T-Shirt Design",
-    category: "Print on Demand",
-    image: "/lovable-uploads/b6915bdd-25ed-44b3-b601-9241b424c1f3.png",
-    description: "Dark fantasy themed t-shirt design with mystical characters in blue tones.",
-  },
-  {
-    id: 5,
-    title: "Anime Character Embroidery Design",
-    category: "Digital Embroidery",
-    image: "/lovable-uploads/embroidery-design-1.png",
-    description: "Detailed anime character embroidery pattern with purple energy effects and dynamic poses.",
-  },
-  {
-    id: 6,
-    title: "Multi-Character Embroidery Design",
-    category: "Digital Embroidery", 
-    image: "/lovable-uploads/embroidery-design-2.png",
-    description: "Complex embroidery design featuring multiple anime characters with vibrant colors and intricate details.",
-  },
-  {
-    id: 7,
-    title: "Pink Hair Character Embroidery",
-    category: "Digital Embroidery",
-    image: "/lovable-uploads/embroidery-design-3.png",
-    description: "Anime character embroidery design with pink hair and detailed facial expressions for textile applications.",
-  },
-  {
-    id: 8,
-    title: "Golden Warrior T-Shirt Design",
-    category: "Print on Demand",
-    image: "/lovable-uploads/tshirt-dark-fantasy.png",
-    description: "Epic dark fantasy t-shirt design featuring a golden warrior with mystical elements and dramatic lighting.",
-  },
-  {
-    id: 9,
-    title: "No Pain No Gain Motivational Design",
-    category: "Print on Demand",
-    image: "/lovable-uploads/tshirt-no-pain-no-gain.png",
-    description: "Motivational fitness t-shirt design with powerful character and inspiring typography in black and white.",
-  },
-  {
-    id: 10,
-    title: "Anime Character T-Shirt Design",
-    category: "Print on Demand",
-    image: "/lovable-uploads/tshirt-anime-1.png",
-    description: "Monochrome anime-inspired t-shirt design with dynamic character pose and detailed linework.",
-  },
-  {
-    id: 11,
-    title: "One Piece Ace T-Shirt Design",
-    category: "Print on Demand",
-    image: "/lovable-uploads/tshirt-anime-ace.png",
-    description: "One Piece inspired t-shirt design featuring Portgas D. Ace with signature hat and flame effects.",
-  },
-  {
-    id: 12,
-    title: "Samurai T-Shirt Design",
-    category: "Print on Demand",
-    image: "/lovable-uploads/tshirt-samurai.png",
-    description: "Traditional samurai-inspired t-shirt design with detailed armor and weapons in artistic black and white style.",
-  },
-];
-
 export const Portfolio = () => {
+  const { t } = useTranslation();
+  const portfolioItems = [
+    {
+      id: 1,
+      title: t("projects.project1.title"),
+      category: t("projects.project1.category"),
+      image: "/lovable-uploads/8021fd02-cb3d-4732-b35b-988e0243718d.png",
+      description: t("projects.project1.description"),
+    },
+    {
+      id: 2,
+      title: t("projects.project2.title"),
+      category: t("projects.project2.category"),
+      image: "/lovable-uploads/2bcee6e4-b1d1-4a0c-91a8-5e7103f4a9ea.png",
+      description: t("projects.project2.description"),
+    },
+    {
+      id: 3,
+      title: t("projects.project3.title"),
+      category: t("projects.project3.category"),
+      image: "/lovable-uploads/8b0e12f9-db81-4926-9f7e-6606b84730d2.png",
+      description: t("projects.project3.description"),
+    },
+    {
+      id: 4,
+      title: t("projects.project4.title"),
+      category: t("projects.project4.category"),
+      image: "/lovable-uploads/b6915bdd-25ed-44b3-b601-9241b424c1f3.png",
+      description: t("projects.project4.description"),
+    },
+    {
+      id: 5,
+      title: t("projects.project5.title"),
+      category: t("projects.project5.category"),
+      image: "/lovable-uploads/embroidery-design-1.png",
+      description: t("projects.project5.description"),
+    },
+    {
+      id: 6,
+      title: t("projects.project6.title"),
+      category: t("projects.project6.category"), 
+      image: "/lovable-uploads/embroidery-design-2.png",
+      description: t("projects.project6.description"),
+    },
+    {
+      id: 7,
+      title: t("projects.project7.title"),
+      category: t("projects.project7.category"),
+      image: "/lovable-uploads/embroidery-design-3.png",
+      description: t("projects.project7.description"),
+    },
+    {
+      id: 8,
+      title: t("projects.project8.title"),
+      category: t("projects.project8.category"),
+      image: "/lovable-uploads/tshirt-dark-fantasy.png",
+      description: t("projects.project8.description"),
+    },
+    {
+      id: 9,
+      title: t("projects.project9.title"),
+      category: t("projects.project9.category"),
+      image: "/lovable-uploads/tshirt-no-pain-no-gain.png",
+      description: t("projects.project9.description"),
+    },
+    {
+      id: 10,
+      title: t("projects.project10.title"),
+      category: t("projects.project10.category"),
+      image: "/lovable-uploads/tshirt-anime-1.png",
+      description: t("projects.project10.description"),
+    },
+    {
+      id: 11,
+      title: t("projects.project11.title"),
+      category: t("projects.project11.category"),
+      image: "/lovable-uploads/tshirt-anime-ace.png",
+      description: t("projects.project11.description"),
+    },
+    {
+      id: 12,
+      title: t("projects.project12.title"),
+      category: t("projects.project12.category"),
+      image: "/lovable-uploads/tshirt-samurai.png",
+      description: t("projects.project12.description"),
+    },
+  ];
+
   const [selectedProject, setSelectedProject] = useState<typeof portfolioItems[0] | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isImageZoomed, setIsImageZoomed] = useState(false);
@@ -129,12 +131,11 @@ export const Portfolio = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-space-grotesk font-bold text-primary mb-6">
-              My Portfolio
+              {t("portfolio.title")}
             </h2>
             <div className="w-24 h-1 bg-accent mx-auto mb-8"></div>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Showcasing my graphic design work including textile printing, embroidery patterns, 
-              and print-on-demand designs for various clients and projects.
+              {t("portfolio.subtitle")}
             </p>
           </div>
 
@@ -212,7 +213,7 @@ export const Portfolio = () => {
                   />
                   <div className="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/20 transition-colors duration-300">
                     <span className="text-white/0 group-hover:text-white/90 transition-colors duration-300 text-sm font-medium">
-                      Click to zoom
+                      {t("portfolio.clickToZoom")}
                     </span>
                   </div>
                 </div>
@@ -220,17 +221,21 @@ export const Portfolio = () => {
 
               <div className="mt-6 p-4 md:p-6 bg-gradient-card rounded-lg border border-border/50">
                 <h4 className="font-space-grotesk font-semibold text-primary mb-3 text-sm md:text-base">
-                  Project Details
+                  {t("portfolio.projectDetails")}
                 </h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs md:text-sm">
                   <div>
-                    <span className="font-medium text-primary">Category:</span>
+                    <span className="font-medium text-primary">{t("portfolio.category")}:</span>
                     <span className="ml-2 text-muted-foreground">{selectedProject.category}</span>
                   </div>
                   <div>
-                    <span className="font-medium text-primary">Type:</span>
+                    <span className="font-medium text-primary">{t("portfolio.type")}:</span>
                     <span className="ml-2 text-muted-foreground">
-                      {selectedProject.category === "Digital Embroidery" ? "Embroidery Pattern" : "T-Shirt Design"}
+                      {selectedProject.category === t("projects.project1.category") || 
+                       selectedProject.category === "Digital Embroidery" || 
+                       selectedProject.category === "Broderie Numérique" 
+                        ? t("portfolio.embroideryPattern") 
+                        : t("portfolio.tshirtDesign")}
                     </span>
                   </div>
                 </div>

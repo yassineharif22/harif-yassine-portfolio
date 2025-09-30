@@ -1,52 +1,54 @@
 import { Briefcase, Calendar, MapPin } from "lucide-react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-
-const experienceData = [
-  {
-    title: "Equipment Operator",
-    company: "Insimaroc – Tanger Med",
-    location: "Tanger, Morocco",
-    period: "Aug–Sep 2022",
-    type: "Contract",
-    description: "Specialized in logistics operations at one of Africa's largest ports, managing critical equipment and cargo operations.",
-    responsibilities: [
-      "Handling, transfer, and loading of goods using specialized equipment",
-      "Machine monitoring and operational reporting for optimal efficiency",
-      "Organizing and recording moved products with precision tracking",
-      "Ensuring safety protocols and equipment maintenance standards"
-    ],
-    skills: ["Equipment Operation", "Logistics Management", "Safety Protocols", "Data Recording"]
-  },
-  {
-    title: "Machine Operator",
-    company: "Plastima",
-    location: "Casablanca, Morocco",
-    period: "2017–2018",
-    type: "Full-time",
-    description: "Operated and maintained industrial machinery in a manufacturing environment, focusing on operational excellence and problem-solving.",
-    responsibilities: [
-      "Repaired technical problems on production machines",
-      "Maintained smooth factory operations and production flow",
-      "Performed preventive maintenance and troubleshooting",
-      "Collaborated with technical teams for system optimization"
-    ],
-    skills: ["Machine Maintenance", "Troubleshooting", "Technical Repair", "Team Collaboration"]
-  }
-];
+import { useTranslation } from "react-i18next";
 
 export const Experience = () => {
+  const { t } = useTranslation();
+  
+  const experienceData = [
+    {
+      title: t("experience.title1"),
+      company: t("experience.company1"),
+      location: t("experience.location1"),
+      period: t("experience.period1"),
+      type: t("experience.type1"),
+      description: t("experience.description1"),
+      responsibilities: [
+        t("experience.responsibility1_1"),
+        t("experience.responsibility1_2"),
+        t("experience.responsibility1_3"),
+        t("experience.responsibility1_4")
+      ],
+      skills: [t("experience.skill1_1"), t("experience.skill1_2"), t("experience.skill1_3"), t("experience.skill1_4")]
+    },
+    {
+      title: t("experience.title2"),
+      company: t("experience.company2"),
+      location: t("experience.location2"),
+      period: t("experience.period2"),
+      type: t("experience.type2"),
+      description: t("experience.description2"),
+      responsibilities: [
+        t("experience.responsibility2_1"),
+        t("experience.responsibility2_2"),
+        t("experience.responsibility2_3"),
+        t("experience.responsibility2_4")
+      ],
+      skills: [t("experience.skill2_1"), t("experience.skill2_2"), t("experience.skill2_3"), t("experience.skill2_4")]
+    }
+  ];
+
   return (
     <section id="experience" className="py-20 bg-gradient-section">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-space-grotesk font-bold text-primary mb-6">
-              Professional Experience
+              {t("experience.title")}
             </h2>
             <div className="w-24 h-1 bg-accent mx-auto mb-8"></div>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              My professional journey spans diverse industrial environments, from manufacturing 
-              to major logistics operations.
+              {t("experience.subtitle")}
             </p>
           </div>
 
@@ -96,7 +98,7 @@ export const Experience = () => {
 
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-foreground mb-3 uppercase tracking-wide">
-                      Key Responsibilities
+                      {t("experience.keyResponsibilities")}
                     </h4>
                     <ul className="space-y-2">
                       {experience.responsibilities.map((responsibility, respIndex) => (
@@ -110,7 +112,7 @@ export const Experience = () => {
 
                   <div>
                     <h4 className="text-sm font-semibold text-foreground mb-3 uppercase tracking-wide">
-                      Skills Applied
+                      {t("experience.skillsApplied")}
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {experience.skills.map((skill, skillIndex) => (

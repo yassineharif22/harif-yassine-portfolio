@@ -1,7 +1,9 @@
 import { ArrowDown, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 
 export const Hero = () => {
+  const { t } = useTranslation();
   const scrollToAbout = () => {
     const aboutSection = document.querySelector("#about");
     if (aboutSection) {
@@ -22,22 +24,20 @@ export const Hero = () => {
       <div className="container mx-auto px-6 py-20 text-center relative z-10">
         <div className="max-w-4xl mx-auto animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-space-grotesk font-bold text-white mb-6">
-            HARIF YASSINE
+            {t("hero.name")}
           </h1>
 
           <h2 className="text-xl md:text-2xl text-white/90 font-inter font-medium mb-4">
-            Specialized Technician in Electromechanics of Automated Systems
+            {t("hero.title")}
           </h2>
 
           <div className="flex items-center justify-center text-white/80 mb-8">
             <MapPin size={20} className="mr-2" />
-            <span className="text-lg">Casablanca, Morocco</span>
+            <span className="text-lg">{t("hero.location")}</span>
           </div>
 
           <p className="text-lg md:text-xl text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Passionate electromechanics engineer with expertise in automated
-            systems, maintenance management, and industrial operations. Driven
-            by innovation and precision.
+            {t("hero.description")}
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
@@ -47,7 +47,7 @@ export const Hero = () => {
               onClick={scrollToAbout}
               className="bg-white text-primary hover:bg-white/90 font-medium px-8 py-3"
             >
-              Explore My Work
+              {t("hero.exploreWork")}
             </Button>
             <Button
               asChild
@@ -60,7 +60,7 @@ export const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Download CV
+                {t("hero.downloadCV")}
               </a>
             </Button>
           </div>
