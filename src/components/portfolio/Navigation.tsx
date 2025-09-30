@@ -1,19 +1,26 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Languages } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 
 const navItems = [
-  { label: "About", href: "#about" },
-  { label: "Education", href: "#education" },
-  { label: "Experience", href: "#experience" },
-  { label: "Portfolio", href: "#portfolio" },
-  { label: "Skills", href: "#skills" },
-  { label: "Contact", href: "#contact" },
+  { label: "nav.about", href: "#about" },
+  { label: "nav.education", href: "#education" },
+  { label: "nav.experience", href: "#experience" },
+  { label: "nav.portfolio", href: "#portfolio" },
+  { label: "nav.skills", href: "#skills" },
+  { label: "nav.contact", href: "#contact" },
 ];
 
 export const Navigation = () => {
+  const { t, i18n } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleLanguage = () => {
+    const newLang = i18n.language === 'en' ? 'fr' : 'en';
+    i18n.changeLanguage(newLang);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,9 +65,18 @@ export const Navigation = () => {
                   onClick={() => scrollToSection(item.href)}
                   className="text-sm font-medium text-foreground hover:text-accent transition-colors"
                 >
-                  {item.label}
+                  {t(item.label)}
                 </button>
               ))}
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={toggleLanguage}
+                className="text-sm font-medium"
+              >
+                <Languages className="h-4 w-4 mr-1" />
+                {i18n.language.toUpperCase()}
+              </Button>
               <Button
                 asChild
                 variant="secondary"
@@ -72,7 +88,7 @@ export const Navigation = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Download CV
+                  {t("nav.downloadCV")}
                 </a>
               </Button>
             </div>
@@ -100,20 +116,28 @@ export const Navigation = () => {
                 onClick={() => scrollToSection(item.href)}
                 className="text-lg font-medium text-foreground hover:text-accent transition-colors"
               >
-                {item.label}
+                {t(item.label)}
               </button>
             ))}
+            <Button
+              variant="ghost"
+              onClick={toggleLanguage}
+              className="text-lg font-medium"
+            >
+              <Languages className="h-5 w-5 mr-2" />
+              {i18n.language.toUpperCase()}
+            </Button>
             <Button
               asChild
               variant="secondary"
               className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-3"
             >
               <a
-                href="https://drive.google.com/your-cv-link"
+                href="https://drive.google.com/file/d/12welaYARXNlNMZoKCQQGpy9fEki54n9h/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Download CV
+                {t("nav.downloadCV")}
               </a>
             </Button>
           </div>

@@ -1,0 +1,11 @@
+{
+  "nav": {
+    "about": "À propos",
+    "education": "Formation",
+    "experience": "Expérience",
+    "portfolio": "Portfolio",
+    "skills": "Compétences",
+    "contact": "Contact",
+    "downloadCV": "Télécharger CV"
+  }
+}
